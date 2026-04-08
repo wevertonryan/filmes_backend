@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import routes from "./routes/route.js"
+import routes from "../routes/route.js"
+import connectDB from "../db/conn.js";
 
 const app = express();
 
@@ -12,4 +13,4 @@ app.use(cors(
 
 app.use("/filmes", routes);
 
-app.listen(5000);
+export default app;
