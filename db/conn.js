@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/Filmes");
+    await mongoose.connect(process.env.MONGODB_URI + "filmes?retryWrites=true&w=majority");
     console.log("Conectou MongoDB");
 }
 await main().catch((err)=>{console.log("Erro na conexão com o Banco: " + err)})
