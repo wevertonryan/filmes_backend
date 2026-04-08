@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json())
 
 app.use(cors(
-    {credentials: true, origin: "https://silver-space-orbit-7v46jqqqjgqfgr9-5173.app.github.dev/"}
+    {credentials: true, origin: "https://silver-space-orbit-7v46jqqqjgqfgr9-5173.app.github.dev"}
 ))
 
 app.use("/filmes", routes);
